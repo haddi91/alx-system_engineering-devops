@@ -1,4 +1,2 @@
 #!/bin/bash
-count=$(find . -mindepth 1 -name ".*" -prune -o -type d -print | wc -l)
-count=$((count - 2))
-
+find . -type d -not -name '.' | wc -l
